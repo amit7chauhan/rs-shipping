@@ -18,8 +18,8 @@ pipeline {
 
     }
 
-     stages {
-            stage('Package Code') {
+
+        stage('Package Code') {
                 steps {
                     sh '''
                         mvn package
@@ -28,6 +28,6 @@ pipeline {
 
             }
 
-        }
+      }
 
 }
