@@ -7,6 +7,7 @@ pipeline {
     }
 
     stages {
+
         stage('Compile code') {
             steps {
                 sh '''
@@ -15,6 +16,15 @@ pipeline {
             }
 
         }
+
+         stage('Package Code') {
+                    steps {
+                        sh '''
+                            mvn package
+                        '''
+                    }
+
+                }
 
     }
 }
