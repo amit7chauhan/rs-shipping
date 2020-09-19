@@ -18,4 +18,16 @@ pipeline {
 
     }
 
+     stages {
+            stage('Package Code') {
+                steps {
+                    sh '''
+                        mvn package
+                    '''
+                }
+
+            }
+
+        }
+
 }
