@@ -22,6 +22,7 @@ pipeline {
                         sh '''
                             mvn checkstyle:checkstyle
                         '''
+                        archiveArtifacts artifacts: 'target/checkstyle-checker.xml', followSymlinks: false
                     }
 
                 }
