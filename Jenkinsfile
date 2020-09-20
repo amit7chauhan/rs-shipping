@@ -17,6 +17,15 @@ pipeline {
 
         }
 
+        stage('Lint Checking code') {
+                    steps {
+                        sh '''
+                            mvn checkstyle:checkstyle
+                        '''
+                    }
+
+                }
+
          stage('Package Code') {
                     steps {
                         sh '''
